@@ -1,31 +1,41 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta os dados do formulário
     $nome = htmlspecialchars($_POST['nome']);
     $email = htmlspecialchars($_POST['email']);
     $mensagem = htmlspecialchars($_POST['mensagem']);
 
-    // Configurações do e-mail
-    $to = "leandrojr.elias.farias@gmail.com"; // Substitua com o seu e-mail pessoal
-    $subject = "Novo Contato do Formulário";
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $mail = new PHPMailer(true);
 
-    // Mensagem do e-mail
-    $message = "<html><body>";
-    $message .= "<h2>Nova mensagem de contato</h2>";
-    $message .= "<p><strong>Nome:</strong> $nome</p>";
-    $message .= "<p><strong>E-mail:</strong> $email</p>";
-    $message .= "<p><strong>Mensagem:</strong></p>";
-    $message .= "<p>$mensagem</p>";
-    $message .= "</body></html>";
+    try {
+        // Configurações do servidor
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Servidor SMTP
+        $mail->SMTPAuth = true;
+        $mail->Username = 'leandrojr.elias.farias@gmail.com'; // Seu e-mail Gmail
+        $mail->Password = 'KTgd452585 '; // Sua senha Gmail
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-    // Envia o e-mail
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Mensagem enviada com sucesso!";
-    } else {
-        echo "Ocorreu um erro ao enviar a mensagem.";
+        // Configurações do e-mail
+        $mail->setFrom($email, $nome);
+        $mail->addAddress('leandrojr.elias.farias@gmail.com', 'leandro Jr'); // Adicione um destinatário
+        $mail->addReplyTo($email, $nome);
+
+        // Conteúdo do e-mail
+        $mail->isHTML(true);
+        $mail->Subject = "Contato do site de $nome";
+        $mail->Body    = "<p>Nome: $nome</p><p>E-mail: $email</p><p>Mensagem:</p><p>$mensagem</p>";
+        $mail->AltBody = "Nome: $nome\nE-mail: $email\n\nMensagem:\n$mensagem";
+
+        $mail->send();
+        echo "E-mail enviado com sucesso!";
+    } catch (Exception $e) {
+        echo "Erro ao enviar e-mail: {$mail->ErrorInfo}";
     }
 }
 ?>
