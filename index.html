@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             background-color: #f7f7f7;
             color: #333;
         }
+
         header {
             background-color: #333;
             padding: 20px;
@@ -20,53 +22,68 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
+
         .logo {
             width: 60px;
             height: 60px;
             border-radius: 50%;
             overflow: hidden;
         }
+
         header h1 {
             margin: 0;
             font-size: 24px;
             color: #fff;
         }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
         nav a {
-            margin: 0 15px;
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
             transition: all 0.3s ease;
         }
+
         nav a:hover {
             color: #ffcc00;
         }
+
         .container {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             font-size: 22px;
             padding: 40px;
-            flex-direction: row-reverse;
         }
+
         .intro {
-            max-width: 600px;
-            margin-left: 50px;
+            flex: 1 1 45%;
+            margin: 10px;
         }
+
         .intro h2 {
             font-size: 36px;
             margin-bottom: 10px;
             color: #333;
         }
+
         .intro p {
             font-size: 18px;
             line-height: 1.6;
             color: #666;
         }
+
         .photo {
-            width: 300px;
-            height: 400px;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             background-color: #ccc;
             display: flex;
             align-items: center;
@@ -74,23 +91,28 @@
             font-size: 24px;
             color: #fff;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+            margin: 10px 0;
         }
+
         .photo img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 8px;
         }
+
         .skills {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
             margin-top: 20px;
         }
+
         .skill {
             width: 80px;
             height: 80px;
-            margin: 0 10px;
             border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -98,13 +120,74 @@
             align-items: center;
             justify-content: center;
         }
+
         .skill img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .intro h2 {
+                font-size: 28px;
+            }
+
+            .intro p {
+                font-size: 16px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .photo {
+                margin-top: 20px;
+            }
+
+            .skills {
+                flex-direction: column;
+            }
+        }
+
+        /* Estilos para tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                width: 90%;
+                padding: 0 20px;
+            }
+
+            .intro h2 {
+                font-size: 32px;
+            }
+        }
+
+        /* Estilos para desktops */
+        @media (min-width: 1025px) {
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .intro h2 {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <img src="logo-inicial-lj.jpg" alt="Logo" class="logo">
@@ -115,17 +198,22 @@
             <a href="Contato.html">Contato</a>
         </nav>
     </header>
+
     <div class="container">
         <div class="intro">
             <h2>Olá! Eu sou Leandro Elias.</h2>
-            <p>"Olá, sou um desenvolvedor em busca de novas oportunidades e parcerias. Através deste site, apresento uma amostra do meu trabalho, projetos e estudos. Sinta-se à vontade para explorar meu portfólio e entrar em contato. Estou à disposição para discutir como podemos colaborar e agregar valor aos seus projetos. Agradeço pelo interesse e aguardo seu contato."</p>
+            <p>"Olá, sou um desenvolvedor em busca de novas oportunidades e parcerias. Através deste site, apresento uma
+                amostra do meu trabalho, projetos e estudos. Sinta-se à vontade para explorar meu portfólio e entrar em
+                contato. Estou à disposição para discutir como podemos colaborar e agregar valor aos seus projetos.
+                Agradeço pelo interesse e aguardo seu contato."</p>
             <p>Abaixo você também poderá ver quais ferramentas uso no meu dia a dia. </p>
             <div class="skills">
                 <div class="skill">
                     <img src="R.png" alt="Java">
                 </div>
                 <div class="skill">
-                    <img src="javascript-sign-vector-graphics-editor-programming-language-area-removebg-preview.png" alt="JavaScript">
+                    <img src="javascript-sign-vector-graphics-editor-programming-language-area-removebg-preview.png"
+                        alt="JavaScript">
                 </div>
                 <div class="skill">
                     <img src="2000px-HTML5_logo_and_wordmark.svg.png" alt="HTML">
@@ -146,4 +234,5 @@
         </div>
     </div>
 </body>
+
 </html>
