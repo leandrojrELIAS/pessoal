@@ -5,101 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-       .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-       .header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background-color: #ffcc00;
-        }
-       .container {
-            padding: 40px;
-        }
-       .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-            margin: 0;
-        }
-       .project {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            min-height: 250px;
-            max-height: 300px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-       .project img {
-            max-width: 100%;
-            max-height: 150px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-       .project h3 {
-            margin-top: 0;
-            font-weight: 700;
-        }
-       .project p {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-       .project a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-       .project a:hover {
-            color: #ff9900;
-        }
-    </style>
+    <link rel="stylesheet" href="projetos.css">
 </head>
 <body>
     <div class="header">
         <h1>PROJETOS</h1>
+        <header>
+            <nav>
+                <a href="index.html">Sobre</a>
+                <a href="Projetos.html">Projetos</a>
+                <a href="Contato.html">Contato</a>
+            </nav>
+        </header>
     </div>
     <div class="container">
         <div class="projects">
             <div class="project">
-                <img src="elegância_em_formato_redondo-removebg-letra E branco.png" alt="Projeto 1">
+                <img src="images/elegância_em_formato_redondo-removebg-letra E branco.png" alt="Projeto 1">
                 <h3>Projeto Site Elegancia Outlet</h3>
                 <p>Projeto criado em Html e Css, com acesso a banco de dados Sql,no caso uma loja de roupas masculino e feminino</p>
                 <a href="https://www.youtube.com/watch?v=84tZc8spBJo" target="_blank">Ver no YouTube</a>
             </div>
             <div class="project">
-                <img src="zen.png" alt="Projeto 2">
+                <img src="images/zen.png" alt="Projeto 2">
                 <h3>Projeto Zenmood </h3>
                 <p>Trabalho voltado para criaçao de um aplicativo mobile, construido em java,a ideia do App, e voltado para relaxamento e palavras motivacionais.</p>
                 <a href="https://www.youtube.com/watch?v=UbLH-tvNQuE&t=305s" target="_blank">Ver no YouTube</a>
             </div>
             <div class="project">
-                <img src="APP_GUARULHOS.jpg" alt="Projeto 3">
+                <img src="images/APP_GUARULHOS.jpg" alt="Projeto 3">
                 <h3>Projeto App GruAlerta </h3>
                 <p>Criaçao de uma idéia de design e construçao de UI, de um app para a Cidade de Guarulhos, voltado para denuncias pelo telefone.</p>
                 <a href="https://ibb.co/R6wZYDy" target="_blank">Ver imagem e layout</a>
+            </div>
+            <div class="project">
+                <img src="images/natureza_em_infusao.png" alt="Projeto 3">
+                <h3>Projeto Natureza em infusao </h3>
+                <p>Criaçao de uma idéia de site ficticio do ramo de fitoterapicos e ervas, com layout clean e sofisticado.</p>
+                <a href="https://natureza-em-infusao.netlify.app " target="_blank">Acessar o site</a>
             </div>
         </div>
     </div>
