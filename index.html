@@ -1,62 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Leandro Elias</title>
+    <title>Portfólio | Leandro Elias</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
-
-<body>
-    <header>
-        <img src="images/logo leandro jr.png" alt="Logo" class="logo">
-        <h1>Leandro Jr Elias</h1>
-        <nav>
-            <a href="#about">Sobre</a>
-            <a href="Projetos.html">Projetos</a>
-            <a href="Contato.html">Contato</a>
-        </nav>
+<body class="bg-gray-100 font-montserrat text-gray-800">
+    <header class="bg-gray-800 text-white py-6 px-4 md:px-8 shadow-lg sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center flex-col md:flex-row">
+            <div class="flex items-center space-x-4">
+                <img src="images/logo leandro jr.png" alt="Logo Leandro Jr" class="w-16 h-16 rounded-full object-cover">
+                <h1 class="text-2xl md:text-3xl font-bold uppercase tracking-wide">Leandro Jr Elias</h1>
+            </div>
+            <nav class="mt-4 md:mt-0 flex space-x-6">
+                <a href="#about" class="text-yellow-400 font-semibold border-b-2 border-yellow-400">Sobre</a>
+                <a href="Projetos.html" class="text-white font-semibold hover:text-yellow-400 transition-transform duration-300 hover:scale-105">Projetos</a>
+                <a href="Contato.html" class="text-white font-semibold hover:text-yellow-400 transition-transform duration-300 hover:scale-105">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="intro">
-            <h2>Olá! Eu sou Leandro Elias.</h2>
-            <p>"Olá, sou um desenvolvedor em busca de novas oportunidades e parcerias. Através deste site, apresento uma
-                amostra do meu trabalho, projetos e estudos. Sinta-se à vontade para explorar meu portfólio e entrar em
-                contato. Estou à disposição para discutir como podemos colaborar e agregar valor aos seus projetos.
-                Agradeço pelo interesse e aguardo seu contato."</p>
-            <p>Abaixo você também poderá ver quais ferramentas uso no meu dia a dia. </p>
-            <div class="skills">
-                <div class="skill">
-                    <img src="images/R.png" alt="Java">
-                </div>
-                <div class="skill">
-                    <img src="images/javascript-sign-vector-graphics-editor-programming-language-area.jpg"
-                        alt="JavaScript">
-                </div>
-                <div class="skill">
-                    <img src="images/2000px-HTML5_logo_and_wordmark.svg.png" alt="HTML">
-                </div>
-                <div class="skill">
-                    <img src="images/3920311-middle-removebg-preview.png" alt="CSS">
-                </div>
-                <div class="skill">
-                    <img src="images/29594.png" alt="SQL">
-                </div>
-                <div class="skill">
-                    <img src="images/react.png" alt="react">
-                </div>
-                <div class="skill">
-                    <img src="images/mongo.png" alt="MongoDb">
-                </div>
+    <main class="max-w-6xl mx-auto py-10 px-4 md:px-8">
+        <section class="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div class="flex-1 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Olá! Eu sou Leandro Elias</h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    Sou um desenvolvedor apaixonado por criar soluções digitais incríveis. Aqui, apresento meu trabalho, 
+                    projetos e estudos. Explore meu portfólio e entre em contato para discutirmos como posso agregar valor 
+                    aos seus projetos!
+                </p>
             </div>
-        </div>
-        <div class="photo">
-            <img src="images/leandro foto perfil.jpg" alt="Leandro Elias">
-        </div>
-    </div>
-</body>
+            <div class="flex-1 max-w-sm">
+                <img src="images/leandro foto perfil.jpg" alt="Foto de Leandro Elias" class="w-full rounded-lg shadow-xl object-cover transform hover:scale-105 transition-all duration-300">
+            </div>
+        </section>
 
+        <section class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 animate-fade-in">Habilidades</h2>
+            <div class="relative overflow-hidden">
+                <div class="carousel-inner" id="skills-carousel">
+                    <div class="carousel-item flex justify-center gap-6">
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/R.png" alt="R" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/javascript-sign-vector-graphics-editor-programming-language-area.jpg" alt="JavaScript" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/2000px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="carousel-item flex justify-center gap-6">
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/3920311-middle-removebg-preview.png" alt="CSS3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/29594.png" alt="SQL" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/react.png" alt="React" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="carousel-item flex justify-center gap-6">
+                        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md hover:scale-110 transition-transform duration-300">
+                            <img src="images/mongo.png" alt="MongoDB" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300" onclick="prevSkillSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300" onclick="nextSkillSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>© 2024 Leandro Elias. <a href="#privacy" class="text-yellow-400 hover:underline">Política de Privacidade</a></p>
+    </footer>
+
+    <script>
+        let currentSkillSlide = 0;
+        const skillSlides = document.querySelectorAll('#skills-carousel .carousel-item');
+        const totalSkillSlides = skillSlides.length;
+
+        function updateSkillCarousel() {
+            const carouselInner = document.getElementById('skills-carousel');
+            carouselInner.style.transform = `translateX(-${currentSkillSlide * 100}%)`;
+        }
+
+        function nextSkillSlide() {
+            currentSkillSlide = (currentSkillSlide + 1) % totalSkillSlides;
+            updateSkillCarousel();
+        }
+
+        function prevSkillSlide() {
+            currentSkillSlide = (currentSkillSlide - 1 + totalSkillSlides) % totalSkillSlides;
+            updateSkillCarousel();
+        }
+
+        setInterval(nextSkillSlide, 4000);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.animate-fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>

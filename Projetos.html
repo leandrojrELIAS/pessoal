@@ -3,61 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+    <title>Projetos | Leandro Elias</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-    <link rel="stylesheet" href="projetos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para o carrossel */
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+    </style>
 </head>
-<body>
-    <div class="header">
-        <h1>PROJETOS</h1>
-        <header>
-            <nav>
-                <a href="index.html">Sobre</a>
-                <a href="Projetos.html">Projetos</a>
-                <a href="Contato.html">Contato</a>
+<body class="bg-gray-100 font-montserrat text-gray-800">
+    <header class="bg-gray-800 text-white py-6 px-4 md:px-8 shadow-lg sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center flex-col md:flex-row">
+            <div class="flex items-center space-x-4">
+                <img src="images/logo leandro jr.png" alt="Logo Leandro Jr" class="w-16 h-16 rounded-full object-cover">
+                <h1 class="text-2xl md:text-3xl font-bold uppercase tracking-wide">Meus Projetos</h1>
+            </div>
+            <nav class="mt-4 md:mt-0 flex space-x-6">
+                <a href="index.html" class="text-white font-semibold hover:text-yellow-400 transition-transform duration-300 hover:scale-105">Sobre</a>
+                <a href="Projetos.html" class="text-yellow-400 font-semibold border-b-2 border-yellow-400">Projetos</a>
+                <a href="Contato.html" class="text-white font-semibold hover:text-yellow-400 transition-transform duration-300 hover:scale-105">Contato</a>
             </nav>
-        </header>
-    </div>
-    <div class="container">
-        <div class="projects">
-            <div class="project">
-                <img src="images/elegância_em_formato_redondo-removebg-letra E branco.png" alt="Projeto 1">
-                <h3>Projeto Site Elegancia Outlet</h3>
-                <p>Criado em Html e Css, com acesso a banco de dados Sql,loja de roupas masculino e feminino</p>
-                <a href="https://www.youtube.com/watch?v=84tZc8spBJo" target="_blank">Ver no YouTube</a>
-            </div>
-            <div class="project">
-                <img src="images/zen.png" alt="Projeto 2">
-                <h3>Projeto Zenmood </h3>
-                <p>Trabalho para criaçao de um aplicativo mobile, construido em java, voltado para relaxamento e palavras motivacionais.</p>
-                <a href="https://www.youtube.com/watch?v=UbLH-tvNQuE&t=305s" target="_blank">Ver no YouTube</a>
-            </div>
-            <div class="project">
-                <img src="images/APP_GUARULHOS.jpg" alt="Projeto 3">
-                <h3>Projeto App GruAlerta </h3>
-                <p>Criaçao de uma idéia de design e construçao de UI, de um app para denuncias na Cidade de Guarulhos,.</p>
-                <a href="https://ibb.co/R6wZYDy" target="_blank">Ver imagem e layout</a>
-            </div>
-            <div class="project">
-                <img src="images/natureza_em_infusao.png" alt="Projeto 3">
-                <h3>Projeto Natureza em infusao </h3>
-                <p>Criaçao de uma idéia de site ficticio do ramo de fitoterapicos e ervas, com layout clean e sofisticado.</p>
-                <a href="https://natureza-em-infusao.netlify.app " target="_blank">Acessar o site</a>
-            </div>
-            <div class="project">
-                <img src="images/Gametech_tumbnail.png" alt="Projeto 3">
-                <h3>Projeto GameTech </h3>
-                <p>Loja de games ficticia, divulgaçao de um modelo de site para empresas do ramo.</p>
-                <br>
-                <a href="https://gaametech.netlify.app/" target="_blank">Acessar o site</a>
         </div>
-        <div class="project">
-            <img src="images/home_bionicao.png" alt="Projeto 3">
-            <h3>Projeto API-BIONICAO </h3>
-            <p>conceito de uma api de Agendamentos para o ramo de petshops.</p>
-            <br>
-            <a href="https://youtu.be/ZLpeKsgZx-o" target="_blank">Acessar youtube</a>
-    </div>
-    </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-10 px-4 md:px-8">
+        <section class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 animate-fade-in">Destaques</h2>
+            <div class="relative overflow-hidden">
+                <div class="carousel-inner" id="carousel">
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                            <img src="images/elegância_em_formato_redondo-removebg-letra E branco.png" alt="Elegancia Outlet" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Elegância Outlet</h3>
+                            <p class="text-gray-600 text-sm mb-4">Site em HTML e CSS com SQL para uma loja de roupas.</p>
+                            <a href="https://www.youtube.com/watch?v=84tZc8spBJo" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                            <img src="images/zen.png" alt="Zenmood" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Zenmood</h3>
+                            <p class="text-gray-600 text-sm mb-4">App em Java para relaxamento e motivação.</p>
+                            <a href="https://www.youtube.com/watch?v=UbLH-tvNQuE&t=305s" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Ver no YouTube</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                            <img src="images/natureza_em_infusao.png" alt="Natureza em Infusão" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Natureza em Infusão</h3>
+                            <p class="text-gray-600 text-sm mb-4">Site fictício de fitoterápicos com layout clean.</p>
+                            <a href="https://natureza-em-infusao.netlify.app" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Acessar Site</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-up">
+                <img src="images/APP_GUARULHOS.jpg" alt="GRUalerta" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-gray-800">GRUalerta</h3>
+                <p class="text-gray-600 text-sm mb-4">Proposta de UI para app de denúncias em Guarulhos.</p>
+                <a href="https://ibb.co/R6wZYDy" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Ver Layout</a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-up" style="animation-delay: 100ms;">
+                <img src="images/Gametech_tumbnail.png" alt="Gametech" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-gray-800">GameTech</h3>
+                <p class="text-gray-600 text-sm mb-4">Loja fictícia de games para empresas do ramo.</p>
+                <a href="https://gaametech.netlify.app/" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Acessar Site</a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-up" style="animation-delay: 200ms;">
+                <img src="images/home_bionicao.png" alt="Bionicao" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-gray-800">API Bionicao</h3>
+                <p class="text-gray-600 text-sm mb-4">Conceito de API de agendamentos para petshops.</p>
+                <a href="https://youtu.be/ZLpeKsgZx-o" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Ver no YouTube</a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-up" style="animation-delay: 300ms;">
+                <img src="images/mova_IA.jpeg" alt="Mova IA" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-gray-800">Mova IA</h3>
+                <p class="text-gray-600 text-sm mb-4">Aplicativo de IA disponível na Play Store.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.myjourney.myjourneychat" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Acessar na Play Store</a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-up" style="animation-delay: 300ms;">
+                <img src="images/casavenda.png" alt="Mova IA" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-gray-800">Casa à Venda</h3>
+                <p class="text-gray-600 text-sm mb-4">Clique para acessar o Site.</p>
+                <a href="https://casavenda.surge.sh" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Acessar Site</a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-up" style="animation-delay: 300ms;">
+                <img src="images/memory.png" alt="Mova IA" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-lg font-bold text-gray-800">Declare seu amor</h3>
+                <p class="text-gray-600 text-sm mb-4">Clique para acessar o Site.</p>
+                <a href="https://memoryslife.netlify.app" target="_blank" class="text-yellow-400 border-2 border-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-white transition-all duration-300">Acessar Site</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>© 2024 Leandro Elias. <a href="#privacy" class="text-yellow-400 hover:underline">Política de Privacidade</a></p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            const carouselInner = document.getElementById('carousel');
+            carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Auto-play do carrossel
+        setInterval(nextSlide, 5000);
+
+        // Animações de entrada
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.animate-fade-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
