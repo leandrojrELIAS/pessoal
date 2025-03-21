@@ -116,44 +116,45 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-6">
-        <p>© 2024 Leandro Elias. <a href="#privacy" class="text-yellow-400 hover:underline">Política de Privacidade</a></p>
+    <footer class="bg-gray-800 text-white text-center py-4 px-4 w-full">
+        <p class="text-sm md:text-base">© 2024 Leandro Elias. <a href="#privacy" class="text-yellow-400 hover:underline">Política de Privacidade</a></p>
     </footer>
+</div>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-        const totalSlides = slides.length;
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
 
-        function updateCarousel() {
-            const carouselInner = document.getElementById('carousel');
-            carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
+    function updateCarousel() {
+        const carouselInner = document.getElementById('carousel');
+        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
 
-        // Auto-play do carrossel
-        setInterval(nextSlide, 5000);
+    // Auto-play do carrossel
+    setInterval(nextSlide, 5000);
 
-        // Animações de entrada
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, { threshold: 0.2 });
+    // Animações de entrada
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, { threshold: 0.2 });
 
-        document.querySelectorAll('.animate-fade-up').forEach(el => observer.observe(el));
-    </script>
+    document.querySelectorAll('.animate-fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
